@@ -95,6 +95,24 @@ section#principal h1 {
 section#principal p {
   text-indent: 25px;
   text-align: justify;
+  line-height: 2em;
+}
+
+section#principal strong {
+  color: #025E73;
+  background-color: #F2A71B;
+  padding: 2px 4px;
+}
+
+section#principal a {
+  text-decoration: none;
+  color: var(--color01);
+  transition: all 300ms ease-in-out;
+}
+
+section#principal a:hover {
+  color: var(--color00);
+  text-decoration: underline;
 }
 
 section#principal h2 {
@@ -111,24 +129,29 @@ section#principal picture {
   justify-content: center;
 }
 
+div#video {
+  margin: 0;
+  box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.199);
+}
+
 #video {
   display: flex;
   justify-content: center;
-  padding: 20px 0;
   @media (max-width:1000px) {
-    width: 550px;
-    height: 325px;
+    margin: 20px 0;
+    width: 100%;
     margin: auto;
     justify-content: center;
     @media (max-width: 850px) {
-      width: 350px;
-      height: 325px;
+      margin: 20px 0;
+      width: 100%;
       margin: auto;
     }
   }
 }
 
 div#last-article {
+  margin-top: 20px;
   background-color: var(--color021);
   border-radius: 5px 5px 5px 5px;
   padding-bottom: 20px;
@@ -148,7 +171,8 @@ div#last-article {
 }
 
 ul {
-  list-style-type: none;
+  list-style-type: '\2705\00A0';
+  list-style-position: inside;
 }
 
 #list1 {
@@ -174,4 +198,14 @@ footer > p {
 
 footer span {
   font-weight: bold;
+}
+
+footer a {
+  color: var(--color02);
+  transition: all 400ms ease-in-out;
+
+  &:hover {
+    text-decoration: underline;
+    color: var(--color021);
+  }
 }
